@@ -1,6 +1,15 @@
 import React from "react";
 
-export default function AbsentStudent({ allStudent }) {
+export default function AbsentStudent({ allStudent, setAllStudent }) {
+  const accidentallyAddHendeler = (roll) => {
+    setAllStudent([
+      ...allStudent
+        .filter((items) => items.roll === roll)
+        .map((item) => ({ ...item, isPresent: true, isAbsent: false })),
+      ...allStudent.filter((items) => items.roll !== roll).map((item) => item),
+    ]);
+  };
+
   return (
     <div className="absent__student__container">
       <h2>Absent Student</h2>
@@ -15,7 +24,9 @@ export default function AbsentStudent({ allStudent }) {
                   <div className="student__roll">Roll: {item.roll}</div>
                 </div>
                 <div className="button__container">
-                  <button>Accidentally Add</button>
+                  <button onClick={() => accidentallyAddHendeler(item.roll)}>
+                    Accidentally Add
+                  </button>
                 </div>
               </li>
             ))}

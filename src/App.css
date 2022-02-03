@@ -47,12 +47,13 @@
   height: auto;
 }
 .header .add__student__form input:nth-child(2) {
-  width: 215px;
+  width: 190px;
   display: inline-block;
   margin-bottom: 0;
 }
 
 .header .add__student__form button {
+  width: 150px;
   background: cadetblue;
   color: #fff;
   border: none;
@@ -62,7 +63,7 @@
   box-shadow: 0 0 10px 2px rgb(0 0 0 / 15%);
   transition: 0.3s;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 }
 
 .body {
@@ -78,8 +79,9 @@
   width: 350px;
   height: 350px;
   padding: 15px;
-  background: white;
+  background: #fad8d1;
   border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(0 0 0 / 15%);
 }
 .body .student__list__container .student__list {
   width: 100%;
@@ -87,36 +89,35 @@
   overflow: auto;
 }
 
-.body .present__student__container .present__student__list::-webkit-scrollbar {
+.body .student__list__container .student__list::-webkit-scrollbar {
   width: 0.5vw;
   background: #fbf6f6;
 }
 
-.body
-  .present__student__container
-  .present__student__list::-webkit-scrollbar-thumb {
+.body .student__list__container .student__list::-webkit-scrollbar-thumb {
   background: #9e9e9e;
-  border-radius: 5vw;
+  border-radius: 1vw;
   border: 0.2vw solid rgba(0, 0, 0, 0);
 }
+
 .body
-  .present__student__container
-  .present__student__list::-webkit-scrollbar-button:single-button {
+  .student__list__container
+  .student__list::-webkit-scrollbar-button:single-button {
   background-color: white;
   display: block;
   border-style: solid;
-  height: 1.5vw;
-  width: 1vw;
+  height: 0.8vw;
+  width: 0.5vw;
 }
 .body
-  .present__student__container
-  .present__student__list::-webkit-scrollbar-button:single-button:vertical:decrement {
+  .student__list__container
+  .student__list::-webkit-scrollbar-button:single-button:vertical:decrement {
   border-width: 0vw 0.3vw 0.4vw 0.3vw;
   border-color: transparent transparent #555555 transparent;
 }
 .body
-  .present__student__container
-  .present__student__list::-webkit-scrollbar-button:single-button:vertical:increment {
+  .student__list__container
+  .student__list::-webkit-scrollbar-button:single-button:vertical:increment {
   border-width: 0vw 0.3vw 0.4vw 0 0.3vw;
   border-color: #555555 transparent transparent transparent;
 }
@@ -125,9 +126,10 @@
   width: auto;
   height: auto;
   padding: 10px;
-  background: #607d8b;
   margin-top: 10px;
   border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgb(0 0 0 / 15%);
+  background-color: rgb(203 223 196);
 }
 
 .body .student__list__container .student__list ul li .student__name__roll {
@@ -156,8 +158,9 @@
   width: 350px;
   height: 350px;
   padding: 15px;
-  background: white;
+  background: #ebe9d1;
   border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(0 0 0 / 15%);
 }
 .body .present__student__container .present__student__list {
   width: 100%;
@@ -165,35 +168,35 @@
   overflow: auto;
 }
 
-.body .student__list__container .student__list::-webkit-scrollbar {
+.body .absent__student__container .absent__student__list::-webkit-scrollbar {
   width: 0.5vw;
   background: #fbf6f6;
 }
-
-.body .student__list__container .student__list::-webkit-scrollbar-thumb {
+.body
+  .absent__student__container
+  .absent__student__list::-webkit-scrollbar-thumb {
   background: #9e9e9e;
-  border-radius: 5vw;
+  border-radius: 1vw;
   border: 0.2vw solid rgba(0, 0, 0, 0);
 }
-
 .body
-  .student__list__container
-  .student__list::-webkit-scrollbar-button:single-button {
+  .absent__student__container
+  .absent__student__list::-webkit-scrollbar-button:single-button {
   background-color: white;
   display: block;
   border-style: solid;
-  height: 1.5vw;
-  width: 1vw;
+  height: 0.8vw;
+  width: 0.5vw;
 }
 .body
-  .student__list__container
-  .student__list::-webkit-scrollbar-button:single-button:vertical:decrement {
+  .absent__student__container
+  .absent__student__list::-webkit-scrollbar-button:single-button:vertical:decrement {
   border-width: 0vw 0.3vw 0.4vw 0.3vw;
   border-color: transparent transparent #555555 transparent;
 }
 .body
-  .student__list__container
-  .student__list::-webkit-scrollbar-button:single-button:vertical:increment {
+  .absent__student__container
+  .absent__student__list::-webkit-scrollbar-button:single-button:vertical:increment {
   border-width: 0vw 0.3vw 0.4vw 0 0.3vw;
   border-color: #555555 transparent transparent transparent;
 }
@@ -202,12 +205,13 @@
   width: auto;
   height: auto;
   padding: 10px;
-  background: #607d8b;
+  background: #f7c3c3;
   margin-top: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 5px 1px rgb(0 0 0 / 15%);
 }
 .body
   .present__student__container
@@ -238,14 +242,17 @@
   .button__container
   button {
   width: 100%;
+  padding: 4px;
+  font-size: 14px;
 }
 
 .body .absent__student__container {
   width: 350px;
   height: 350px;
   padding: 15px;
-  background: white;
+  background: #d5f3ff;
   border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgb(0 0 0 / 15%);
 }
 .body .absent__student__container .absent__student__list {
   width: 100%;
@@ -253,36 +260,36 @@
   overflow: auto;
 }
 
-.body .absent__student__container .absent__student__list::-webkit-scrollbar {
+.body .present__student__container .present__student__list::-webkit-scrollbar {
   width: 0.5vw;
   background: #fbf6f6;
 }
 
 .body
-  .absent__student__container
-  .absent__student__list::-webkit-scrollbar-thumb {
+  .present__student__container
+  .present__student__list::-webkit-scrollbar-thumb {
   background: #9e9e9e;
-  border-radius: 5vw;
+  border-radius: 1vw;
   border: 0.2vw solid rgba(0, 0, 0, 0);
 }
 .body
-  .absent__student__container
-  .absent__student__list::-webkit-scrollbar-button:single-button {
+  .present__student__container
+  .present__student__list::-webkit-scrollbar-button:single-button {
   background-color: white;
   display: block;
   border-style: solid;
-  height: 1.5vw;
-  width: 1vw;
+  height: 0.8vw;
+  width: 0.5vw;
 }
 .body
-  .absent__student__container
-  .absent__student__list::-webkit-scrollbar-button:single-button:vertical:decrement {
+  .present__student__container
+  .present__student__list::-webkit-scrollbar-button:single-button:vertical:decrement {
   border-width: 0vw 0.3vw 0.4vw 0.3vw;
   border-color: transparent transparent #555555 transparent;
 }
 .body
-  .absent__student__container
-  .absent__student__list::-webkit-scrollbar-button:single-button:vertical:increment {
+  .present__student__container
+  .present__student__list::-webkit-scrollbar-button:single-button:vertical:increment {
   border-width: 0vw 0.3vw 0.4vw 0 0.3vw;
   border-color: #555555 transparent transparent transparent;
 }
@@ -291,12 +298,13 @@
   width: auto;
   height: auto;
   padding: 10px;
-  background: #607d8b;
+  background: rgb(113 172 141);
   margin-top: 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0 0 5px 1px rgb(0 0 0 / 15%);
 }
 .body
   .absent__student__container
@@ -317,4 +325,16 @@
   li
   .button__container {
   width: auto;
+}
+
+.body
+  .absent__student__container
+  .absent__student__list
+  ul
+  li
+  .button__container
+  button {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
 }
