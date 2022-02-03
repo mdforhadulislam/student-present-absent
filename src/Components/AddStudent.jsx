@@ -65,6 +65,12 @@ export default function AddStudent({
           .map((item) => ({ ...item })),
       ]);
       setIsEdit(false);
+      setStudentNameAndRoll({
+        name: "",
+        roll: "",
+        isPresent: false,
+        isAbsent: false,
+      });
     } else {
       alert("Enter Student Name And Roll");
     }
