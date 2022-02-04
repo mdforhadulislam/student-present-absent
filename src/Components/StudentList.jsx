@@ -24,7 +24,19 @@ export default function StudentList({
     setAllStudent([
       ...allStudent
         .filter((items) => items.roll === roll)
-        .map((item) => ({ ...item, isPresent: true, isAbsent: false })),
+        .map((item) => {
+          if (item.isPresent === true) {
+            alert("The student is already in the Present List");
+            return item;
+          }
+          if (item.isAbsent === true) {
+            alert("The student is already in the Absent List");
+            return item;
+          }
+          if (item.isPresent === false) {
+            return { ...item, isPresent: true, isAbsent: false };
+          }
+        }),
       ...allStudent.filter((items) => items.roll !== roll).map((item) => item),
     ]);
   };
@@ -33,7 +45,19 @@ export default function StudentList({
     setAllStudent([
       ...allStudent
         .filter((items) => items.roll === roll)
-        .map((item) => ({ ...item, isAbsent: true, isPresent: false })),
+        .map((item) => {
+          if (item.isAbsent === true) {
+            alert("The student is already in the Absent List");
+            return item;
+          }
+          if (item.isPresent === true) {
+            alert("The student is already in the Present List");
+            return item;
+          }
+          if (item.isAbsent === false) {
+            return { ...item, isAbsent: true, isPresent: false };
+          }
+        }),
       ...allStudent.filter((items) => items.roll !== roll).map((item) => item),
     ]);
   };
