@@ -13,7 +13,7 @@ function App() {
     isPresent: false,
     isAbsent: false,
   });
-  const [editAbleItemRoll, setEditAbleItemRoll] = useState([]);
+  const [editAbleItemRoll, setEditAbleItemRoll] = useState("");
   const [isEdit, setIsEdit] = useState(false);
 
   return (

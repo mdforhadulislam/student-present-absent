@@ -56,14 +56,20 @@ export default function AddStudent({
   const updateHendeler = (e) => {
     e.preventDefault();
     if (studentNameAndRoll.name !== "" && studentNameAndRoll.roll !== "") {
-      setAllStudent([
-        ...allStudent
-          .filter((items) => items.roll === editAbleItemRoll)
-          .map((item) => ({ ...item, ...studentNameAndRoll })),
-        ...allStudent
-          .filter((items) => items.roll !== editAbleItemRoll)
-          .map((item) => ({ ...item })),
-      ]);
+      const isTrue = allStudent.filter(
+        (items) => Number(items.roll) === Number(studentNameAndRoll.roll)
+      );
+      isTrue.length > 0
+        ? alert(" Roll " + studentNameAndRoll.roll + " Alrady Used")
+        : setAllStudent([
+            ...allStudent
+              .filter((items) => items.roll === editAbleItemRoll)
+              .map((item) => ({ ...item, ...studentNameAndRoll })),
+            ...allStudent
+              .filter((items) => items.roll !== editAbleItemRoll)
+              .map((item) => ({ ...item })),
+          ]);
+
       setIsEdit(false);
       setStudentNameAndRoll({
         name: "",
