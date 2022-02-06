@@ -1,9 +1,7 @@
 import { useState } from "react";
 import "./App.css";
-import AbsentStudent from "./Components/AbsentStudent";
-import AddStudent from "./Components/AddStudent";
-import PresentStudent from "./Components/PresentStudent";
-import StudentList from "./Components/StudentList";
+import Header from "./Components/Header";
+import Student from "./Components/Student";
 
 function App() {
   const [allStudent, setAllStudent] = useState([]);
@@ -18,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">
+      {/* <div className="header">
         <h1 className="title">Student Present Absent Managed Application</h1>
         <AddStudent
           allStudent={allStudent}
@@ -29,8 +27,24 @@ function App() {
           isEdit={isEdit}
           setIsEdit={setIsEdit}
         />
-      </div>
-
+      </div> */}
+      <Header
+        allStudent={allStudent}
+        setAllStudent={setAllStudent}
+        studentNameAndRoll={studentNameAndRoll}
+        setStudentNameAndRoll={setStudentNameAndRoll}
+        editAbleItemRoll={editAbleItemRoll}
+        isEdit={isEdit}
+        setIsEdit={setIsEdit}
+      />
+      <Student
+        allStudent={allStudent}
+        setAllStudent={setAllStudent}
+        setStudentNameAndRoll={setStudentNameAndRoll}
+        setEditAbleItemRoll={setEditAbleItemRoll}
+        setIsEdit={setIsEdit}
+      />
+      {/* 
       <div className="body">
         <StudentList
           allStudent={allStudent}
@@ -41,7 +55,7 @@ function App() {
         />
         <PresentStudent allStudent={allStudent} setAllStudent={setAllStudent} />
         <AbsentStudent allStudent={allStudent} setAllStudent={setAllStudent} />
-      </div>
+      </div> */}
     </div>
   );
 }
