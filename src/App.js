@@ -25,23 +25,10 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("allStudent", JSON.stringify(allStudent));
-    // setAllStudent(JSON.parse(localStorage.getItem("allStudent")));
   }, [allStudent]);
 
   return (
     <div className="App">
-      {/* <div className="header">
-        <h1 className="title">Student Present Absent Managed Application</h1>
-        <AddStudent
-          allStudent={allStudent}
-          setAllStudent={setAllStudent}
-          studentNameAndRoll={studentNameAndRoll}
-          setStudentNameAndRoll={setStudentNameAndRoll}
-          editAbleItemRoll={editAbleItemRoll}
-          isEdit={isEdit}
-          setIsEdit={setIsEdit}
-        />
-      </div> */}
       <Header
         allStudent={allStudent}
         setAllStudent={setAllStudent}
@@ -58,18 +45,6 @@ function App() {
         setEditAbleItemRoll={setEditAbleItemRoll}
         setIsEdit={setIsEdit}
       />
-      {/* 
-      <div className="body">
-        <StudentList
-          allStudent={allStudent}
-          setAllStudent={setAllStudent}
-          setStudentNameAndRoll={setStudentNameAndRoll}
-          setEditAbleItemRoll={setEditAbleItemRoll}
-          setIsEdit={setIsEdit}
-        />
-        <PresentStudent allStudent={allStudent} setAllStudent={setAllStudent} />
-        <AbsentStudent allStudent={allStudent} setAllStudent={setAllStudent} />
-      </div> */}
     </div>
   );
 }

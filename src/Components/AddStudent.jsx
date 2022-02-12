@@ -9,12 +9,6 @@ export default function AddStudent({
   isEdit,
   setIsEdit,
 }) {
-  // "#D8E2DC",
-  // "#FFE5D9",
-  // "#FBFAF0",
-  // "#FFE9EE",
-  // "#FFDDE4",
-
   const nameHendeler = (value) => {
     setStudentNameAndRoll({ ...studentNameAndRoll, name: value });
   };
