@@ -41,7 +41,10 @@ export default function AddStudent({
       isTrue.length > 0
         ? setAllStudent([...allStudent])
         : setAllStudent([studentNameAndRoll, ...allStudent]);
-
+      localStorage.setItem(
+        "allStudent",
+        JSON.stringify([studentNameAndRoll, ...allStudent])
+      );
       setStudentNameAndRoll({
         name: "",
         roll: "",

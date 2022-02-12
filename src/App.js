@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Student from "./Components/Student";
 
 function App() {
-  const [allStudent, setAllStudent] = useState([]);
+  const getLocalSorageData = () => {
+    const getData = JSON.parse(localStorage.getItem("allStudent"));
+    if (getData) {
+      return getData;
+    } else {
+      return [];
+    }
+  };
+
+  const [allStudent, setAllStudent] = useState(getLocalSorageData());
   const [studentNameAndRoll, setStudentNameAndRoll] = useState({
     name: "",
     roll: "",
@@ -13,6 +22,11 @@ function App() {
   });
   const [editAbleItemRoll, setEditAbleItemRoll] = useState("");
   const [isEdit, setIsEdit] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("allStudent", JSON.stringify(allStudent));
+    // setAllStudent(JSON.parse(localStorage.getItem("allStudent")));
+  }, [allStudent]);
 
   return (
     <div className="App">
